@@ -7,7 +7,7 @@ const controls = [
   {label: 'Salad', type: 'salad'},
   {label: 'Bacon', type: 'bacon'},
   {label: 'Cheese', type: 'cheese'},
-  {label: 'MeAt', type: 'meat'},
+  {label: 'Meat', type: 'meat'},
 ]
 const buildControls = props => {
   return (
@@ -21,9 +21,8 @@ const buildControls = props => {
                 disabled={props.disabled[ctrl.type]}
                 removed={() => props.ingredientRemoved(ctrl.type)}
                 added={() => props.ingredientAdded(ctrl.type)} />
-          }
-        )
-      }
+          })}
+          <button disabled={!props.purchasable} className={classes.OrderButton} onClick={props.ordered}>ORDER NOW</button>
     </div>
   )
 }
