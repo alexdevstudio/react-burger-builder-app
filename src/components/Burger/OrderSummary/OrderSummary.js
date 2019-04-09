@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
 //import classes from './OrderSummary.module.css'
-import Aux from '../../../hoc/Auxiliary'
+import Aux from '../../../hoc/Aux/Auxiliary'
 import Button from '../../UI/Button/Button'
 
 class OrderSummary extends Component {
+
+  // This could be functional component, componentDidUpdate is just for testing
   componentDidUpdate () {
     console.log('[Order summary] Did Update');
   }
